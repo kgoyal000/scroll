@@ -40,7 +40,7 @@
 var file = location.pathname.split( "/" ).pop();
 
 var link = document.createElement( "link" );
-link.href = "https://www.barxbuddy.com/enV2Golden/app/desktop/css/custom.css";
+link.href = "test.css";
 link.type = "text/css";
 link.rel = "stylesheet";
 link.media = "screen,print";
