@@ -40,11 +40,11 @@ setTimeout(() => {
   window.scrollTo(0,0)
 },500)
 
-window.addEventListener("resize", myFunction);
+// window.addEventListener("resize", myFunction);
 
-function myFunction() {
-  window.location.reload()
-}
+// function myFunction() {
+//   window.location.reload()
+// }
 var file = location.pathname.split( "/" ).pop();
 
 var link = document.createElement( "link" );
@@ -52,33 +52,41 @@ link.href = "https://kgoyal000.github.io/scroll/test.css";
 link.type = "text/css";
 link.rel = "stylesheet";
 link.media = "screen,print";
-
+var scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 document.getElementsByTagName( "head" )[0].appendChild( link );
 document.getElementById("section--86216-174").classList.add('floating-bar')
 document.getElementById("section--86216").classList.add('floating-bar')
+window.addEventListener("resize", myFunction);
 
+function myFunction() {
 if (screen.width > 860){
+  scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+}else{
+   scroll =  scroll - (50 * scroll / 100) 
+}
+}
 window.addEventListener('scroll', function() {    
               var doc = document.documentElement;
-              var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+              scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+
              if (scroll >= 1300) {
                  //clearHeader, not clearheader - caps H
                  document.querySelector(".floating-bar[data-hide-on='desktop']").classList.add("showup");
-             }
-             else {
-                document.querySelector(".floating-bar[data-hide-on='desktop']").classList.remove("showup");
-             }
-         } , false);
-}else{
-window.addEventListener('scroll', function() {    
-              var doc = document.documentElement;
-              var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-             if (scroll >= 2200) {
-                 //clearHeader, not clearheader - caps H
                  document.querySelector(".floating-bar[data-hide-on='mobile']").classList.add("showup");
              }
              else {
+                document.querySelector(".floating-bar[data-hide-on='desktop']").classList.remove("showup");
                 document.querySelector(".floating-bar[data-hide-on='mobile']").classList.remove("showup");
              }
          } , false);
-}
+// window.addEventListener('scroll', function() {    
+//               var doc = document.documentElement;
+//               var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+//              if (scroll >= 2200) {
+//                  //clearHeader, not clearheader - caps H
+//                  document.querySelector(".floating-bar[data-hide-on='mobile']").classList.add("showup");
+//              }
+//              else {
+//                 document.querySelector(".floating-bar[data-hide-on='mobile']").classList.remove("showup");
+//              }
+//          } , false);
