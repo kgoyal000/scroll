@@ -47,6 +47,8 @@ link.media = "screen,print";
 
 document.getElementsByTagName( "head" )[0].appendChild( link );
 document.getElementById("section--86216-174").classList.add('floating-bar')
+document.getElementById("section--86216").classList.add('floating-bar')
+
 if (screen.width > 860){
 window.addEventListener('scroll', function() {    
               var doc = document.documentElement;
