@@ -52,6 +52,8 @@ link.href = "https://kgoyal000.github.io/scroll/test.css";
 link.type = "text/css";
 link.rel = "stylesheet";
 link.media = "screen,print";
+
+var doc = document.documentElement;
 var scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 document.getElementsByTagName( "head" )[0].appendChild( link );
 document.getElementById("section--86216-174").classList.add('floating-bar')
@@ -67,7 +69,7 @@ if (screen.width > 860){
 }
 window.addEventListener('scroll', function() {    
               var doc = document.documentElement;
-              scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+//               scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
              if (scroll >= 1300) {
                  //clearHeader, not clearheader - caps H
