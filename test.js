@@ -40,6 +40,11 @@ setTimeout(() => {
   window.scrollTo(0,0)
 },500)
 
+window.addEventListener("resize", myFunction);
+
+function myFunction() {
+  window.location.reload()
+}
 var file = location.pathname.split( "/" ).pop();
 
 var link = document.createElement( "link" );
