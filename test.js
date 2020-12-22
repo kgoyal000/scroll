@@ -36,3 +36,39 @@
 // attachEvent(document, "scroll", update);
 // attachEvent(window, "resize", update);
 // update();
+
+var file = location.pathname.split( "/" ).pop();
+
+var link = document.createElement( "link" );
+link.href = "https://www.barxbuddy.com/enV2Golden/app/desktop/css/custom.css";
+link.type = "text/css";
+link.rel = "stylesheet";
+link.media = "screen,print";
+
+document.getElementsByTagName( "head" )[0].appendChild( link );
+document.getElementById("section--86216-174").classList.add('floating-bar')
+if (screen.width > 860){
+window.addEventListener('scroll', function() {    
+              var doc = document.documentElement;
+              var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+             if (scroll >= 1600) {
+                 //clearHeader, not clearheader - caps H
+                 document.querySelector(".floating-bar").classList.add("showup");
+             }
+             else {
+                document.querySelector(".floating-bar").classList.remove("showup");
+             }
+         } , false);
+}else{
+window.addEventListener('scroll', function() {    
+              var doc = document.documentElement;
+              var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+             if (scroll >= 3000) {
+                 //clearHeader, not clearheader - caps H
+                 document.querySelector(".floating-bar").classList.add("showup");
+             }
+             else {
+                document.querySelector(".floating-bar").classList.remove("showup");
+             }
+         } , false);
+}
