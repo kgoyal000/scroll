@@ -36,7 +36,9 @@
 // attachEvent(document, "scroll", update);
 // attachEvent(window, "resize", update);
 // update();
-window.scrollTo(0,0)
+setTimeout(() => {
+  window.scrollTo(0,0)
+},500)
 
 var file = location.pathname.split( "/" ).pop();
 
