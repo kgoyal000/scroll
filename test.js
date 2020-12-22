@@ -55,10 +55,10 @@ window.addEventListener('scroll', function() {
               var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
              if (scroll >= 1300) {
                  //clearHeader, not clearheader - caps H
-                 document.querySelector(".floating-bar").classList.add("showup");
+                 document.querySelector(".floating-bar[data-hide-on='desktop']").classList.add("showup");
              }
              else {
-                document.querySelector(".floating-bar").classList.remove("showup");
+                document.querySelector(".floating-bar[data-hide-on='desktop']").classList.remove("showup");
              }
          } , false);
 }else{
@@ -67,10 +67,10 @@ window.addEventListener('scroll', function() {
               var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
              if (scroll >= 2800) {
                  //clearHeader, not clearheader - caps H
-                 document.querySelector(".floating-bar").classList.add("showup");
+                 document.querySelector(".floating-bar[data-hide-on='mobile']").classList.add("showup");
              }
              else {
-                document.querySelector(".floating-bar").classList.remove("showup");
+                document.querySelector(".floating-bar[data-hide-on='mobile']").classList.remove("showup");
              }
          } , false);
 }
