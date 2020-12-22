@@ -53,7 +53,7 @@ if (screen.width > 860){
 window.addEventListener('scroll', function() {    
               var doc = document.documentElement;
               var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-             if (scroll >= 1600) {
+             if (scroll >= 1300) {
                  //clearHeader, not clearheader - caps H
                  document.querySelector(".floating-bar").classList.add("showup");
              }
@@ -65,7 +65,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {    
               var doc = document.documentElement;
               var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-             if (scroll >= 3000) {
+             if (scroll >= 2800) {
                  //clearHeader, not clearheader - caps H
                  document.querySelector(".floating-bar").classList.add("showup");
              }
