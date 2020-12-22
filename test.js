@@ -60,34 +60,7 @@ document.getElementById("section--86216").classList.add('floating-bar')
 window.addEventListener("resize", myFunction);
 
 function myFunction() {
-  if (screen.width > 860){
-window.addEventListener('scroll', function() {    
-              var doc = document.documentElement;
-              scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-
-             if (scroll >= 1300) {
-                 //clearHeader, not clearheader - caps H
-                 document.querySelector(".floating-bar[data-hide-on='desktop']").classList.add("showup");
-                 document.querySelector(".floating-bar[data-hide-on='mobile']").classList.add("showup");
-             }
-             else {
-                document.querySelector(".floating-bar[data-hide-on='desktop']").classList.remove("showup");
-                document.querySelector(".floating-bar[data-hide-on='mobile']").classList.remove("showup");
-             }
-         } , false);
-}else{
-window.addEventListener('scroll', function() {    
-              var doc = document.documentElement;
-              var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-             if (scroll >= 2200) {
-                 //clearHeader, not clearheader - caps H
-                 document.querySelector(".floating-bar[data-hide-on='mobile']").classList.add("showup");
-             }
-             else {
-                document.querySelector(".floating-bar[data-hide-on='mobile']").classList.remove("showup");
-             }
-         } , false);
-}
+  console.log("resized")
 }
 if (screen.width > 860){
 window.addEventListener('scroll', function() {    
