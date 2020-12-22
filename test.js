@@ -65,7 +65,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {    
               var doc = document.documentElement;
               var scroll =  (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-             if (scroll >= 2800) {
+             if (scroll >= 2200) {
                  //clearHeader, not clearheader - caps H
                  document.querySelector(".floating-bar[data-hide-on='mobile']").classList.add("showup");
              }
