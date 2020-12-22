@@ -40,7 +40,7 @@
 var file = location.pathname.split( "/" ).pop();
 
 var link = document.createElement( "link" );
-link.href = "test.css";
+link.href = "https://kgoyal000.github.io/scroll/test.css";
 link.type = "text/css";
 link.rel = "stylesheet";
 link.media = "screen,print";
